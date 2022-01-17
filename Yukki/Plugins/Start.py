@@ -76,18 +76,18 @@ async def welcome(_, message: Message):
                 ) = await get_assistant_details(ran_ass)
                 out = start_pannel()
                 await message.reply_text(
-                    f"Welcome To {MUSIC_BOT_NAME}\n\nPromote me as administrator in your group otherwise I will not function properly.\n\nAssistant Username:- @{ASS_USERNAME}\nAssistant ID:- {ASS_ID}",
+                    f"WELCOME {MUSIC_BOT_NAME}\n\nPROMOTE ME AS ADMINISTRATOR IN YOUR GROUP OTHERWISE I WILL NOT FUNCTION PROPERLY.\n\nASSISTANT USERNAME:- @{ASS_USERNAME}\nASSISTANT ID:- {ASS_ID}",
                     reply_markup=InlineKeyboardMarkup(out[1]),
                 )
             if member.id in ASSIDS:
                 return await remove_active_chat(chat_id)
             if member.id in OWNER_ID:
                 return await message.reply_text(
-                    f"{MUSIC_BOT_NAME}'s Owner[{member.mention}] has just joined your chat."
+                    f"{MUSIC_BOT_NAME}'s Oᴡɴᴇʀ[{member.mention}] ʜᴀs ᴊᴜsᴛ ᴊᴏɪɴᴇᴅ ʏᴏᴜʀ ᴄʜᴀᴛ."
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
-                    f"A member of {MUSIC_BOT_NAME}'s Sudo User[{member.mention}] has just joined your chat."
+                    f" A ᴍᴇᴍʙᴇʀ ᴏғ {MUSIC_BOT_NAME}'s Sᴜᴅᴏ Usᴇʀ[{member.mention}] ʜᴀs ᴊᴜsᴛ ᴊᴏɪɴᴇᴅ ʏᴏᴜʀ ᴄʜᴀᴛ."
                 )
             return
         except:
